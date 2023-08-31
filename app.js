@@ -5,7 +5,7 @@ const path = require('path');
 const port = process.env.PORT || 3001;
 
 app.use(express.static(path.join(__dirname, 'views')));
-app.use(express.static(path.join(__dirname, 'public/css')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'home.html'));
