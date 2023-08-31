@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'home.html'));
+    res.sendFile(path.join(__dirname, 'views', 'home.html'), path.join(__dirname, 'public', 'css/style.css'));
 });
 
 app.get('/register', (req, res) => {
